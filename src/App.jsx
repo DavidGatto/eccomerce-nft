@@ -19,6 +19,7 @@ function App() {
           <Route path="/cart" element={<CartContainer />} />
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
         </Route>
+        <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>
   );
