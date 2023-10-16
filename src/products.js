@@ -3,8 +3,10 @@ export let products = [
     id: 1,
     title: "Avatar-1",
     price: "200",
-    stock: 5,
+    stock: 4,
     category: "Cybernetics Avatars",
+    description:
+      "A creative masterpiece that transports you to a world of exceptional wonders.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696306201/avatar-1_w4afu8.png",
   },
@@ -12,8 +14,10 @@ export let products = [
     id: 2,
     title: "Avatar-2",
     price: "200",
-    stock: 5,
+    stock: 8,
     category: "Cybernetics Avatars",
+    description:
+      "An artistic wonder that immerses you in a journey through the extraordinary.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696306282/avatar-2_wjwnac.png",
   },
@@ -21,8 +25,10 @@ export let products = [
     id: 3,
     title: "Avatar-3",
     price: "200",
-    stock: 5,
+    stock: 9,
     category: "Cybernetics Avatars",
+    description:
+      "An artwork that takes you to explore the exceptional on a unique journey.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307616/avatar-3_dze2fv.png",
   },
@@ -30,8 +36,10 @@ export let products = [
     id: 4,
     title: "Avatar-4",
     price: "200",
-    stock: 5,
+    stock: 2,
     category: "Cybernetics Avatars",
+    description:
+      "An artistic prodigy that immerses you in a tour of the astonishing.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307622/avatar-4_eguuat.png",
   },
@@ -39,8 +47,10 @@ export let products = [
     id: 5,
     title: "swat-1",
     price: "200",
-    stock: 5,
+    stock: 13,
     category: "Korrupt Swat",
+    description:
+      "A visual marvel that takes you on an unforgettable journey through the exceptional.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307638/mononft-1_hckxrn.png",
   },
@@ -48,8 +58,10 @@ export let products = [
     id: 6,
     title: "swat-2",
     price: "200",
-    stock: 5,
+    stock: 22,
     category: "Korrupt Swat",
+    description:
+      "A captivating display of creativity that unveils the extraordinary.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307645/mononft-2_x1ruit.png",
   },
@@ -57,8 +69,10 @@ export let products = [
     id: 7,
     title: "swat-3",
     price: "200",
-    stock: 5,
+    stock: 4,
     category: "Korrupt Swat",
+    description:
+      "An enchanting masterpiece that unveils the wonders of imagination.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307651/mononft-3_svcnow.png",
   },
@@ -66,9 +80,55 @@ export let products = [
     id: 8,
     title: "swat-4",
     price: "200",
-    stock: 5,
+    stock: 8,
     category: "Korrupt Swat",
+    description:
+      "An immersive journey into the realm of artistic brilliance and wonder.",
     image:
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307657/mononft-4_qrnwik.png",
+  },
+  {
+    id: 9,
+    title: "Tusked-1",
+    price: "200",
+    stock: 3,
+    category: "TuskedTitan",
+    description:
+      "A visionary creation that invites you to explore the realms of the extraordinary.",
+    image:
+      "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049398/3d-01_iige7c.png",
+  },
+  {
+    id: 10,
+    title: "Tusked-2",
+    price: "200",
+    stock: 4,
+    category: "TuskedTitan",
+    description:
+      "A breathtaking manifestation of art that unravels the magic of the extraordinary.",
+    image:
+      "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049406/3d-02_zb30ms.png",
+  },
+  {
+    id: 11,
+    title: "Tusked-3",
+    price: "200",
+    stock: 2,
+    category: "TuskedTitan",
+    description:
+      "A mesmerizing fusion of art and innovation that transcends the ordinary.",
+    image:
+      "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049414/3d-03_dphnzi.png",
+  },
+  {
+    id: 12,
+    title: "Tusked-4",
+    price: "200",
+    stock: 11,
+    category: "TuskedTitan",
+    description:
+      "A spellbinding creation that unveils a realm of boundless imagination and beauty.",
+    image:
+      "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049422/3d-04_jdkyfg.png",
   },
 ];

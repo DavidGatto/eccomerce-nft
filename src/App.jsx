@@ -1,20 +1,26 @@
-import { Sidebar } from "./components/layouts/Sidebar/Sidebar";
-import { Navbar } from "./components/layouts/Navbar/Navbar";
-import { Home } from "./components/pages/Home/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ItemListContainer } from "./components/pages/ItemListContainer/ItemListContainer";
+import { Home } from "./components/pages/Home/Home";
+import { CartContainer } from "./components/pages/Cart/CartContainer";
+import { ItemDetailContainer } from "./components/pages/ItemDetailContainer/ItemDetailContainer";
+import { Layout } from "./components/layouts/Layout";
 
 function App() {
   return (
-    <div className="relative">
-      <div className="flex bg-indigo-300">
-        <Sidebar />
-        <div className="flex-1 bg-indigo-300">
-          <Navbar />
-          <Home />
-          <ItemListContainer />
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/store" element={<ItemListContainer />} />
+          <Route
+            path="/category/:categoryName"
+            element={<ItemListContainer />}
+          />
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<CartContainer />} />
+          <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

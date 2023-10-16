@@ -1,6 +1,7 @@
 import { SidebarList } from "../SidebarList/SidebarList";
 import { LuChevronFirst, LuChevronLast } from "react-icons/lu";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Sidebar = () => {
   const [expanded, setExpanded] = useState(true);
@@ -17,13 +18,15 @@ export const Sidebar = () => {
         }`}
       >
         <div className="p-4 pb-2 flex justify-between">
-          <img
-            src="https://res.cloudinary.com/dzmn27ifb/image/upload/v1695853120/imagen_2023-09-27_191837633_hsxqxw.png"
-            className={`overflow-hidden transition-all ${
-              expanded ? "w-16" : "w-0"
-            }`}
-            alt="logo"
-          />
+          <Link to="/">
+            <img
+              src="https://res.cloudinary.com/dzmn27ifb/image/upload/v1695853120/imagen_2023-09-27_191837633_hsxqxw.png"
+              className={`overflow-hidden transition-all ${
+                expanded ? "w-16" : "w-0"
+              }`}
+              alt="logo"
+            />
+          </Link>
           <button
             onClick={toggleExpanded}
             className="p-1.5 rounded-lg bg-indigo-200 hover:bg-indigo-100"
