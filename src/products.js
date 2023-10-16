@@ -1,8 +1,8 @@
 export let products = [
   {
     id: 1,
-    title: "Avatar-1",
-    price: "200",
+    title: "Cybernetic Wonder",
+    price: "180",
     stock: 4,
     category: "Cybernetics Avatars",
     description:
@@ -12,8 +12,8 @@ export let products = [
   },
   {
     id: 2,
-    title: "Avatar-2",
-    price: "200",
+    title: "Digital Dreamer",
+    price: "120",
     stock: 8,
     category: "Cybernetics Avatars",
     description:
@@ -23,8 +23,8 @@ export let products = [
   },
   {
     id: 3,
-    title: "Avatar-3",
-    price: "200",
+    title: "Virtual Voyager",
+    price: "150",
     stock: 9,
     category: "Cybernetics Avatars",
     description:
@@ -34,8 +34,8 @@ export let products = [
   },
   {
     id: 4,
-    title: "Avatar-4",
-    price: "200",
+    title: "Cybernetic Prodigy",
+    price: "90",
     stock: 2,
     category: "Cybernetics Avatars",
     description:
@@ -45,8 +45,8 @@ export let products = [
   },
   {
     id: 5,
-    title: "swat-1",
-    price: "200",
+    title: "Korrupt Marvel",
+    price: "160",
     stock: 13,
     category: "Korrupt Swat",
     description:
@@ -56,8 +56,8 @@ export let products = [
   },
   {
     id: 6,
-    title: "swat-2",
-    price: "200",
+    title: "Swat Spectacle",
+    price: "70",
     stock: 22,
     category: "Korrupt Swat",
     description:
@@ -67,8 +67,8 @@ export let products = [
   },
   {
     id: 7,
-    title: "swat-3",
-    price: "200",
+    title: "Enchanted Swat",
+    price: "180",
     stock: 4,
     category: "Korrupt Swat",
     description:
@@ -78,8 +78,8 @@ export let products = [
   },
   {
     id: 8,
-    title: "swat-4",
-    price: "200",
+    title: "Immersive Swat",
+    price: "40",
     stock: 8,
     category: "Korrupt Swat",
     description:
@@ -89,8 +89,8 @@ export let products = [
   },
   {
     id: 9,
-    title: "Tusked-1",
-    price: "200",
+    title: "Visionary Titan",
+    price: "120",
     stock: 3,
     category: "TuskedTitan",
     description:
@@ -100,8 +100,8 @@ export let products = [
   },
   {
     id: 10,
-    title: "Tusked-2",
-    price: "200",
+    title: "Breathtaking Tusked",
+    price: "90",
     stock: 4,
     category: "TuskedTitan",
     description:
@@ -111,8 +111,8 @@ export let products = [
   },
   {
     id: 11,
-    title: "Tusked-3",
-    price: "200",
+    title: "Titan Fusion",
+    price: "150",
     stock: 2,
     category: "TuskedTitan",
     description:
@@ -122,7 +122,7 @@ export let products = [
   },
   {
     id: 12,
-    title: "Tusked-4",
+    title: "Tusked Creation",
     price: "200",
     stock: 11,
     category: "TuskedTitan",

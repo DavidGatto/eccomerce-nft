@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+
 export const Home = () => {
   return (
     <div>
       <div className="flex justify-center items-center">
         <img
           className="portada rounded-2xl mt-10"
-          src="https://res.cloudinary.com/dzmn27ifb/image/upload/v1697350542/23fa45207ace2e43c7400e67ac8235bd_jzvdox.jpg"
+          src="https://res.cloudinary.com/dzmn27ifb/image/upload/v1697486024/6aeb2ec6b8198c2480257804c6c661b0_jy1ivu.jpg"
           alt="portada nft"
         />
       </div>
       <div className="flex justify-center gap-96 p-2">
-        <h4 className=" text-2xl">Trending Currently</h4>
+        <h4 className="text-2xl">Trending Currently</h4>
         <Link to="/store">
-          <button className=" bg-indigo-950 rounded text-indigo-500 p-1">
+          <button className="bg-indigo-950 rounded text-indigo-500 p-1">
             See all
           </button>
         </Link>
