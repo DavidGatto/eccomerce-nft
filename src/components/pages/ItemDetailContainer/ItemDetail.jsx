@@ -1,6 +1,6 @@
 import { CounterContainer } from "../../common/Counter/CounterContainer";
 
-export const ItemDetail = ({ productSelected, onAdd }) => {
+export const ItemDetail = ({ productSelected, onAdd, initial }) => {
   return (
     <div className="flex justify-center items-centerW">
       <div className="flex justify-center items-center bg-indigo-950 m-10 py-7 px-4 gap-11 rounded-2xl">
@@ -19,7 +19,11 @@ export const ItemDetail = ({ productSelected, onAdd }) => {
             <p className="text-indigo-400">{productSelected.description}</p>
           </div>
 
-          <CounterContainer stock={productSelected.stock} onAdd={onAdd} />
+          <CounterContainer
+            stock={productSelected.stock}
+            onAdd={onAdd}
+            initial={initial}
+          />
         </div>
         <div className="flex justify-center items-center">
           <img
