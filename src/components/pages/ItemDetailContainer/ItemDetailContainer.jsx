@@ -3,6 +3,7 @@ import { products } from "../../../products";
 import { ItemDetail } from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../Context/CartContext";
+
 export const ItemDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
 

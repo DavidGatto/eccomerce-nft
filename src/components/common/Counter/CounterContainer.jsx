@@ -1,7 +1,13 @@
 import { useState } from "react";
 import { Counter } from "./Counter";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
+  const notify = () =>
+    toast.success("Added product!", {
+      position: "bottom-right",
+    });
   const [counter, setCoutner] = useState(initial);
   const sumar = () => {
     if (counter < stock) {
@@ -17,6 +23,12 @@ export const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
     }
   };
   return (
-    <Counter sumar={sumar} restar={restar} counter={counter} onAdd={onAdd} />
+    <Counter
+      sumar={sumar}
+      restar={restar}
+      counter={counter}
+      onAdd={onAdd}
+      notify={notify}
+    />
   );
 };

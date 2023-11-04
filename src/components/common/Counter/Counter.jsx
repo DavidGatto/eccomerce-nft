@@ -1,6 +1,7 @@
 import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
+import { ToastContainer } from "react-toastify";
 
-export const Counter = ({ sumar, restar, counter, onAdd }) => {
+export const Counter = ({ sumar, restar, counter, onAdd, notify }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-3 mt-4">
       <div className="flex items-center gap-4">
@@ -14,10 +15,14 @@ export const Counter = ({ sumar, restar, counter, onAdd }) => {
       </div>
       <button
         className=" bg-indigo-200 rounded p-1"
-        onClick={() => onAdd(counter)}
+        onClick={() => {
+          onAdd(counter);
+          notify();
+        }}
       >
         Add to cart
       </button>
+      <ToastContainer />
     </div>
   );
 };

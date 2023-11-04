@@ -17,7 +17,7 @@ export const Navbar = ({ isSidebarExpanded }) => {
         <input
           type="search"
           className="w-full py-2 px-3 placeholder-indigo-900 text-indigo-900 bg-gradient-to-tr from-indigo-300 to-indigo-400 hover:from-indigo-400 hover:to-indigo-500 rounded-md focus:outline-none"
-          placeholder="Buscar..."
+          placeholder="Search..."
         />
       </div>
       <div className="relative inline-block text-left">
