@@ -15,7 +15,6 @@ function Checkout() {
       .match(/.{1,4}/g)
       ?.join(" ");
 
-    // Permite borrar números si la longitud de `inputText` es menor que la longitud de `formattedText`
     if (inputText.length < formattedText.length) {
       formattedText = formattedText.slice(0, inputText.length);
     }
