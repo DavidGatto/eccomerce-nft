@@ -6,7 +6,9 @@ export const ProductCard = ({ item }) => {
       <img
         src={item.image}
         alt={item.title}
-        className="w-auto  h-auto object-cover"
+        className={`w-auto h-auto object-cover ${
+          item.stock > 0 ? "" : "opacity-50"
+        }`}
       />
       <div className="p-4 bg-indigo-950">
         <h2 className="text-2xl text-indigo-300 font-semibold mb-2">
@@ -16,11 +18,17 @@ export const ProductCard = ({ item }) => {
           <span className="text-l text-indigo-300 font-bold">
             {item.price} ETH
           </span>
-          <Link to={`/itemDetail/${item.id}`}>
-            <button className=" bg-gradient-to-tr from-indigo-300 to-indigo-400 hover:from-indigo-400 hover:to-indigo-500 text-white font-bold py-2 px-4 rounded-full">
-              INFO
-            </button>
-          </Link>
+          {item.stock > 0 ? (
+            <Link to={`/itemDetail/${item.id}`}>
+              <button className=" bg-gradient-to-tr from-indigo-300 to-indigo-400 hover:from-indigo-400 hover:to-indigo-500 text-white font-bold py-2 px-4 rounded-full">
+                INFO
+              </button>
+            </Link>
+          ) : (
+            <h4 className="bg-gradient-to-tr from-indigo-300 to-indigo-400 hover:from-indigo-400 hover:to-indigo-500 text-white font-bold py-2 px-4 rounded-full">
+              Out of stock
+            </h4>
+          )}
         </div>
       </div>
     </div>

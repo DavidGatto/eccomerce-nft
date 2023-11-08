@@ -4,14 +4,8 @@ import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../../firebaseConfig";
 import { Skeleton } from "@mui/material";
-// import { products } from "../../../products";
 
 export const ItemListContainer = () => {
-  // const rellenarDB = () => {
-  //   const productsCollection = collection(db, "products");
-  //   products.forEach((el) => addDoc(productsCollection, el));
-  // };
-
   const renderSkeletons = () => {
     const skeletons = [];
 
