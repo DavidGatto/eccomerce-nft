@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 export const CartCard = () => {
   const { cart, deleteProduct, clearCart, totalPrice, totalProducts } =
@@ -44,9 +45,11 @@ export const CartCard = () => {
           <h4>Total price: {total} ETH</h4>
           <h4>Total items: {totalItems}</h4>
         </div>
-        <button className=" bg-blue-900 rounded-sm p-1 text-white">
-          Buy now
-        </button>
+        <Link to="/checkout">
+          <button className=" bg-blue-900 rounded-sm p-1 text-white">
+            Buy now
+          </button>
+        </Link>
       </div>
     </div>
   );

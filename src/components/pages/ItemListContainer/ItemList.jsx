@@ -1,25 +1,6 @@
 import { ProductCard } from "../../common/ProductCard/ProductCard";
-import Skeleton from "@mui/material/Skeleton";
 
-export const ItemList = ({ items }) => {
-  const renderSkeletons = () => {
-    const skeletons = [];
-
-    for (let i = 0; i < 6; i++) {
-      skeletons.push(
-        <div className="flex flex-col justify-center items-center">
-          <Skeleton variant="rectangular" width={236} height={184} />
-          <Skeleton variant="text" width={180} height={60} />
-          <div className="flex gap-4">
-            <Skeleton variant="text" width={150} height={50} />
-            <Skeleton variant="circle" width={60} height={40} />
-          </div>
-        </div>
-      );
-    }
-    return skeletons;
-  };
-
+export const ItemList = ({ items, renderSkeletons }) => {
   return (
     <div className="container mx-auto bg-indigo-300">
       {items.length === 0 ? (

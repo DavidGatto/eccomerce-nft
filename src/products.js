@@ -1,28 +1,5 @@
 export let products = [
   {
-    id: 1,
-    title: "Cybernetic Wonder",
-    price: "180",
-    stock: 4,
-    category: "Cybernetics Avatars",
-    description:
-      "A creative masterpiece that transports you to a world of exceptional wonders.",
-    image:
-      "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696306201/avatar-1_w4afu8.png",
-  },
-  {
-    id: 2,
-    title: "Digital Dreamer",
-    price: "120",
-    stock: 8,
-    category: "Cybernetics Avatars",
-    description:
-      "An artistic wonder that immerses you in a journey through the extraordinary.",
-    image:
-      "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696306282/avatar-2_wjwnac.png",
-  },
-  {
-    id: 3,
     title: "Virtual Voyager",
     price: "150",
     stock: 9,
@@ -33,7 +10,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307616/avatar-3_dze2fv.png",
   },
   {
-    id: 4,
     title: "Cybernetic Prodigy",
     price: "90",
     stock: 2,
@@ -44,7 +20,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307622/avatar-4_eguuat.png",
   },
   {
-    id: 5,
     title: "Korrupt Marvel",
     price: "160",
     stock: 13,
@@ -55,7 +30,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307638/mononft-1_hckxrn.png",
   },
   {
-    id: 6,
     title: "Swat Spectacle",
     price: "70",
     stock: 22,
@@ -66,7 +40,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307645/mononft-2_x1ruit.png",
   },
   {
-    id: 7,
     title: "Enchanted Swat",
     price: "180",
     stock: 4,
@@ -77,7 +50,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307651/mononft-3_svcnow.png",
   },
   {
-    id: 8,
     title: "Immersive Swat",
     price: "40",
     stock: 8,
@@ -88,7 +60,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1696307657/mononft-4_qrnwik.png",
   },
   {
-    id: 9,
     title: "Visionary Titan",
     price: "120",
     stock: 3,
@@ -99,7 +70,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049398/3d-01_iige7c.png",
   },
   {
-    id: 10,
     title: "Breathtaking Tusked",
     price: "90",
     stock: 4,
@@ -110,7 +80,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049406/3d-02_zb30ms.png",
   },
   {
-    id: 11,
     title: "Titan Fusion",
     price: "150",
     stock: 2,
@@ -121,7 +90,6 @@ export let products = [
       "https://res.cloudinary.com/dzmn27ifb/image/upload/v1697049414/3d-03_dphnzi.png",
   },
   {
-    id: 12,
     title: "Tusked Creation",
     price: "200",
     stock: 11,
