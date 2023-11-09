@@ -49,8 +49,9 @@ export const Sidebar = () => {
             }`}
           >
             <div className="leading-4">
-              <h4 className="font-semibold text-white">Ttavoo</h4>
-              <span className="text-xs text-white">daviddgatto@gmail.com</span>
+              <Link to="/login">
+                <button className=" text-indigo-950">Login/Register</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -6,9 +6,7 @@ export const ProductCard = ({ item }) => {
       <img
         src={item.image}
         alt={item.title}
-        className={`w-auto h-auto object-cover ${
-          item.stock > 0 ? "" : "opacity-50"
-        }`}
+        className="w-auto h-auto object-cover"
       />
       <div className="p-4 bg-indigo-950">
         <h2 className="text-2xl text-indigo-300 font-semibold mb-2">

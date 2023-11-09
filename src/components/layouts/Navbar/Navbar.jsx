@@ -1,7 +1,17 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { CartWidget } from "../../common/CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import { SearchContext } from "../../../Context/searchContext";
+
 export const Navbar = ({ isSidebarExpanded }) => {
+  const { handleSearch } = useContext(SearchContext);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleChange = (event) => {
+    setSearchValue(event.target.value);
+    handleSearch(event.target.value);
+  };
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -15,6 +25,8 @@ export const Navbar = ({ isSidebarExpanded }) => {
     >
       <div className="max-w-7xl">
         <input
+          value={searchValue}
+          onChange={handleChange}
           type="search"
           className="w-full py-2 px-3 placeholder-indigo-900 text-indigo-900 bg-gradient-to-tr from-indigo-300 to-indigo-400 hover:from-indigo-400 hover:to-indigo-500 rounded-md focus:outline-none"
           placeholder="Search..."
