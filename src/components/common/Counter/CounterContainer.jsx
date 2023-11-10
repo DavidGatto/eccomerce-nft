@@ -13,7 +13,10 @@ export const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
     if (counter < stock) {
       setCoutner(counter + 1);
     } else {
-      alert("cantidad maxima");
+      toast.error("maximum quantity", {
+        position: "bottom-right",
+        autoClose: 3000,
+      });
     }
   };
 

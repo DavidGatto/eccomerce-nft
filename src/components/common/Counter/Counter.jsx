@@ -1,4 +1,5 @@
 import { AiFillMinusSquare, AiFillPlusSquare } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
 export const Counter = ({ sumar, restar, counter, onAdd, notify }) => {
@@ -13,15 +14,20 @@ export const Counter = ({ sumar, restar, counter, onAdd, notify }) => {
           <AiFillMinusSquare />
         </button>
       </div>
-      <button
-        className=" bg-indigo-200 rounded p-1"
-        onClick={() => {
-          onAdd(counter);
-          notify();
-        }}
-      >
-        Add to cart
-      </button>
+      <div className="flex gap-6">
+        <button
+          className=" bg-indigo-200 rounded p-1"
+          onClick={() => {
+            onAdd(counter);
+            notify();
+          }}
+        >
+          Add to cart
+        </button>
+        <Link to="/store">
+          <button className=" bg-indigo-200 rounded p-1">Back to store</button>
+        </Link>
+      </div>
       <ToastContainer />
     </div>
   );

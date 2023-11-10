@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../../Context/CartContext";
 import {
   collection,
@@ -8,6 +8,7 @@ import {
   doc,
 } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
+import { Link } from "react-router-dom";
 const initialData = {
   number: "",
   name: "",
@@ -17,9 +18,9 @@ const initialData = {
   mail: "",
 };
 
-function Checkout() {
+const Checkout = () => {
   const [formData, setFormData] = useState(initialData);
-
+  const [isFormValid, setIsFormValid] = useState(false);
   const [orderId, setOrderId] = useState(null);
 
   const { cart, totalPrice, clearCart } = useContext(CartContext);
@@ -71,10 +72,46 @@ function Checkout() {
     clearCart();
   };
 
+  useEffect(() => {
+    if (
+      formData.number &&
+      formData.name &&
+      formData.expiry &&
+      formData.cvc &&
+      formData.phone &&
+      formData.mail
+    ) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [formData]);
   return (
     <>
       {orderId ? (
-        <h2>gracias por la compra {orderId}</h2>
+        <div className="flex justify-center items-center mt-24 gap-8 bg-gradient-to-tr from-indigo-300 to-indigo-400 m-10 py-10 rounded-xl shadow-2xl">
+          <img
+            className=" w-52 h-52 rounded-xl"
+            src="https://res.cloudinary.com/dzmn27ifb/image/upload/v1698608845/8add68eaa891f1fdd8f0d8a5b3c77d90_wda81a.jpg"
+            alt="art nft"
+          />
+          <div className="text-center m-4 flex flex-col gap-2">
+            <h1 className="text-5xl text-center text-indigo-950">
+              Thanks for your purchase
+            </h1>
+            <p>Your purchase order is {orderId}</p>
+            <Link to="/store">
+              <button className=" bg-blue-900 rounded-sm p-1 text-white mt-10">
+                Keep buying
+              </button>
+            </Link>
+          </div>
+          <img
+            className="w-52 h-52 rounded-xl"
+            src="https://res.cloudinary.com/dzmn27ifb/image/upload/v1698608842/c934c8dec9f06a314db5b51145265329_i7rm2u.jpg"
+            alt="nft art"
+          />
+        </div>
       ) : (
         <div className="flex w-full mx-auto justify-center items-center">
           <div className="items-center bg-gradient-to-r from-indigo-500 to-indigo-400 rounded-lg shadow-lg mt-4 flex">
@@ -242,6 +279,7 @@ function Checkout() {
               </div>
               <div>
                 <button
+                  disabled={!isFormValid}
                   onClick={handlesumbit}
                   type="submit"
                   className="mt-4 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -255,6 +293,5 @@ function Checkout() {
       )}
     </>
   );
-}
-
+};
 export default Checkout;
