@@ -11,14 +11,14 @@ import { UserContextComponent } from "./Context/UserContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { NotFound } from "./components/common/NotFound/NotFound";
-import { SearchProvider } from "./Context/searchContext";
+import { SearchContextComponent } from "./Context/searchContext";
 
 function App() {
   return (
     <BrowserRouter>
       <CartContextComponent>
         <UserContextComponent>
-          <SearchProvider>
+          <SearchContextComponent>
             <Routes>
               <Route element={<Layout />}>
                 <Route path="/store" element={<ItemListContainer />} />
@@ -38,7 +38,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
             <ToastContainer />
-          </SearchProvider>
+          </SearchContextComponent>
         </UserContextComponent>
       </CartContextComponent>
     </BrowserRouter>
