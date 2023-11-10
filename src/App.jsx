@@ -11,7 +11,7 @@ import { UserContextComponent } from "./Context/UserContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { NotFound } from "./components/common/NotFound/NotFound";
-import { SearchContextComponent } from "./Context/SearchContext";
+import { SearchContextComponent } from "./Context/SearchContext.jsx";
 
 function App() {
   return (
