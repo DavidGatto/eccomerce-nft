@@ -6,12 +6,12 @@ import { ItemDetailContainer } from "./components/pages/ItemDetailContainer/Item
 import { Layout } from "./components/layouts/Layout";
 import CartContextComponent from "./Context/CartContext";
 import Checkout from "./components/pages/Checkout/Checkout";
-import { SearchProvider } from "./Context/searchContext";
 import { Login } from "./components/pages/Login/Login";
 import { UserContextComponent } from "./Context/UserContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { NotFound } from "./components/common/NotFound/NotFound";
+import { SearchProvider } from "./Context/searchContext";
 
 function App() {
   return (
