@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartWidget } from "../../common/CartWidget/CartWidget";
 import { Link } from "react-router-dom";
-import { SearchContext } from "../../../Context/searchContext";
+import { SearchContext } from "../../../Context/SearchContext";
 
 export const Navbar = ({ isSidebarExpanded }) => {
   const { handleSearch } = useContext(SearchContext);

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { ProductCard } from "../../common/ProductCard/ProductCard";
-import { SearchContext } from "../../../Context/searchContext";
 import { WhitoutResult } from "../../common/WhitoutResult/WhitoutResult";
+import { SearchContext } from "../../../Context/SearchContext";
 
 export const ItemList = ({ items, renderSkeletons }) => {
   const { searchTerm } = useContext(SearchContext);
