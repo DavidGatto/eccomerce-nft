@@ -45,14 +45,14 @@ export const SidebarList = ({ expanded }) => {
           expanded={expanded}
         />
       </Link>
-      {/* <Link to="/stats" onClick={() => handleItemClick("Stats")}> */}
-      <SidebarItem
-        icon={<MdQueryStats />}
-        text="Stats"
-        isActive={activeItem === "Stats"}
-        expanded={expanded}
-      />
-      {/* </Link> */}
+      <Link to="/stats" onClick={() => handleItemClick("Stats")}>
+        <SidebarItem
+          icon={<MdQueryStats />}
+          text="Stats"
+          isActive={activeItem === "Stats"}
+          expanded={expanded}
+        />
+      </Link>
     </ul>
   );
 };

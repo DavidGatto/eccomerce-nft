@@ -12,6 +12,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { NotFound } from "./components/common/NotFound/NotFound";
 import { SearchContextComponent } from "./Context/SearchContext.jsx";
+import { Stats } from "./components/pages/Stats/Stats.jsx";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                 />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/stats" element={<Stats />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
