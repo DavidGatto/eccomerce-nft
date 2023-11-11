@@ -6,12 +6,12 @@ export const Counter = ({ sumar, restar, counter, onAdd, notify }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-3 mt-4">
       <div className="flex items-center gap-4">
-        <button className=" text-xl text-indigo-200" onClick={sumar}>
-          <AiFillPlusSquare />
-        </button>
-        <h4 className="text-white">{counter}</h4>
         <button className=" text-xl text-indigo-200" onClick={restar}>
           <AiFillMinusSquare />
+        </button>
+        <h4 className="text-white">{counter}</h4>
+        <button className=" text-xl text-indigo-200" onClick={sumar}>
+          <AiFillPlusSquare />
         </button>
       </div>
       <div className="flex gap-6">

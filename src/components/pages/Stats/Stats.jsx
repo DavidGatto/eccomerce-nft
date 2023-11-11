@@ -1,50 +1,60 @@
 import { getDocs, collection } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../../firebaseConfig";
-
+import CircularProgress from "@mui/material/CircularProgress";
+import "@mui/material/styles";
 export const Stats = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    let usersCollection = collection(db, "users");
+    const fetchData = async () => {
+      try {
+        const usersCollection = collection(db, "users");
+        const res = await getDocs(usersCollection);
+        const newArr = res.docs.map((user) => ({
+          ...user.data(),
+          id: user.id,
+        }));
+        setItems(newArr);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    getDocs(usersCollection).then((res) => {
-      let newArr = res.docs.map((user) => {
-        return { ...user.data(), id: user.id };
-      });
-      setItems(newArr);
-    });
+    fetchData();
   }, []);
 
   return (
-    <div>
-      <table className="min-w-full  bg-indigo-300 border border-indigo-300">
-        <thead>
-          <tr>
-            <th className="py-2 px-4  text-right text-indigo-700">Name</th>
-            <th className="py-2 px-4 text-right pl-8 text-indigo-700">Price</th>
-            <th className="py-2 px-4 text-right pl-10 text-indigo-700">
-              volume
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {items.map((user, index) => (
-            <tr className=" border-b-2 border-indigo-600" key={index}>
-              <td className="py-2 px-4 ">
+    <>
+      {items.length > 0 ? (
+        <div className="mb-10 mx-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {items.map((item) => (
+            <div
+              key={item.id}
+              className="bg-gradient-to-tr from-indigo-300 to-indigo-400 shadow-md rounded-md flex flex-col justify-between p-4 mt-10 shadow-indigo-950"
+            >
+              <div className="flex items-center justify-between mb-4">
                 <img
-                  src={user.image}
-                  alt={user.name}
-                  className="w-10 h-10 rounded-full"
+                  className="rounded-full w-14 ml-2 shadow-lg  shadow-indigo-900"
+                  src={item.image}
+                  alt={item.name}
                 />
-              </td>
-              <td className=" text-left px-4 text-indigo-950">{user.name}</td>
-              <td className="py-2 px-4 text-indigo-950">{user.price1} ETH</td>
-              <td className="py-2 px-4 text-indigo-950">{user.price2} ETH</td>
-            </tr>
+                <h1 className="ml-2 text-lg font-semibold text-indigo-950">
+                  {item.name}
+                </h1>
+              </div>
+              <div className="flex justify-between">
+                <p className="font-bold text-indigo-600">{item.price1} ETH</p>
+                <p className="font-bold text-indigo-600">{item.price2} ETH</p>
+              </div>
+            </div>
           ))}
-        </tbody>
-      </table>
-    </div>
+        </div>
+      ) : (
+        <div className="flex items-center justify-center h-screen">
+          <CircularProgress size={80} />
+        </div>
+      )}
+    </>
   );
 };
