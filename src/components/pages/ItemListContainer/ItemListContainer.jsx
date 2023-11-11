@@ -46,7 +46,6 @@ export const ItemListContainer = () => {
 
   return (
     <div>
-      {/* <button onClick={rellenarDB}>rellenar</button> */}
       <ItemList items={items} renderSkeletons={renderSkeletons} />
     </div>
   );
